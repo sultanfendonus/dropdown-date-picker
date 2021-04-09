@@ -1,10 +1,17 @@
 import React from 'react'
 
-import { ExampleComponent } from 'dropdown-date-picker'
-import 'dropdown-date-picker/dist/index.css'
+import { DatePicker } from 'dropdown-date-picker'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <div style={{ margin: 20 }}>
+      <DatePicker
+        onDateUpdate={(updatedDate) => {
+          console.log(updatedDate)
+        }}
+      />
+    </div>
+  )
 }
 
 export default App
